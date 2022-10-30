@@ -39,20 +39,13 @@ export function Home() {
       dispatch(setAccessTokenToStore(resUser?.data?.access_token));
       dispatch(setTrackDetailsToStore(resTrackDetails?.data));
     } catch (error) {
-      console.log(
-        '[Home] setUserAllListData error: ',
-        error.response.status === 400,
-      );
+      console.log('[Home] setUserAllListData error: ', error);
     }
   };
 
   useEffect(() => {
     setUserDetails();
   }, []);
-
-  useEffect(() => {
-    console.log('track_info====== ', track_info);
-  }, [track_info]);
 
   return (
     <View style={styles.container}>

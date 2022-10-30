@@ -11,10 +11,6 @@ module.exports = {
   collectCoverageFrom: [
     'src/**/*.js',
     '!src/assets/**',
-    '!src/constants/**',
-    '!src/localization/**',
-    '!src/mocks/**',
-    '!src/test-utils/**',
-    '!src/theme/**',
+    '!src/components/**',
   ],
 };

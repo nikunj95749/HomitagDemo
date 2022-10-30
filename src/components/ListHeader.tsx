@@ -4,12 +4,13 @@ import { TxtBold } from './text/TxtBold';
 
 interface ListHeaderProps {
   title: string;
+  testID?: string;
   style?: object;
 }
 
-const ListHeader = ({ title = '', style = {} }: ListHeaderProps) => {
+const ListHeader = ({ title = '', style = {},testID = '' }: ListHeaderProps) => {
   return (
-    <View style={[styles.container, { ...style }]}>
+    <View testID={testID} style={[styles.container, { ...style }]}>
       <TxtBold title={title} style={styles.title} />
       <View style={styles.flex}></View>
     </View>
